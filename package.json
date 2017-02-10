@@ -1,0 +1,24 @@
+{
+  "name": "humansandistatic",
+  "version": "1.0.0",
+  "description": "Humans and I static site",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --watch --inline",
+    "postinstall": "typings install",
+    "build": "webpack",
+    "test": "test"
+  },
+  "author": "Jeremy Cantu",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.6",
+    "typings": "^2.1.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  },
+  "dependencies": {
+    "tachyons": "^4.6.1"
+  }
+}
