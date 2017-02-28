@@ -6,13 +6,15 @@
   "scripts": {
     "start": "webpack-dev-server --watch --inline",
     "postinstall": "typings install",
-    "build": "webpack",
+    "build": "npm run webpackBuild && npm run precache",
+    "webpackBuild" : "webpack",
+    "precache": "sw-precache --verbose --config=sw-precache-config.js",
     "test": "test"
   },
   "author": "Jeremy Cantu",
   "license": "ISC",
   "devDependencies": {
-    "sw-precache-webpack-plugin": "^0.9.0",
+    "sw-precache": "^5.0.0",
     "ts-loader": "^2.0.0",
     "typescript": "^2.1.6",
     "typings": "^2.1.0",
