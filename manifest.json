@@ -1,0 +1,15 @@
+{
+  "name": "Humans And I",
+  "short_name": "Site for the band Humans And I",
+  "icons": [{
+        "src": "images/logo.jpg",
+        "type": "ico",
+        "sizes": "1080x1080"
+      }],
+  "start_url": "",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#5C4E9B",
+  "theme_color": "#5C4E9B"
+}
