@@ -12,6 +12,7 @@
   "author": "Jeremy Cantu",
   "license": "ISC",
   "devDependencies": {
+    "sw-precache-webpack-plugin": "^0.9.0",
     "ts-loader": "^2.0.0",
     "typescript": "^2.1.6",
     "typings": "^2.1.0",
