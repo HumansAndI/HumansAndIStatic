@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["app.bundle.js","889364574159deece12983151923b6ec"],["images/banner-redux.jpg","1a3373bf11357aae21abe0fd3763dd63"],["images/banner.jpg","7ca3cdd6503d49f1ac2b9cf424b135fc"],["images/logo.jpg","7b94ddd1006e1cfac1ca3465c20d894e"],["index.html","ea46a5c36c2134199a6eae3320131710"],["src/lib/ga.js","d26a432d29642475094c2047e4af35e9"],["styles/style.css","e75974470887cef45c864ff144af4156"],["styles/tachyons.min.css","e15a28b1f357b6ea5e43eb0dc068baf5"],["sw-precache-config.js","cf56d7b04ae2a0720e7b093c05172740"],["swRegister.js","c86bce6e51fe4dc38d92cf732665c9bb"],["webpack.config.js","8a663344a10ef3050dfa176abb324855"]];
+var precacheConfig = [["app.bundle.js","0ea236c83c822f99bb1839f2175b8786"],["index.html","1f77aba024f3d6653e0a8a1d5f401876"],["src/lib/ga.js","d26a432d29642475094c2047e4af35e9"],["styles/style.css","0ccc11480db122342c2add7656de0af9"],["styles/tachyons.min.css","e15a28b1f357b6ea5e43eb0dc068baf5"],["sw-precache-config.js","cf56d7b04ae2a0720e7b093c05172740"],["swRegister.js","c86bce6e51fe4dc38d92cf732665c9bb"],["webpack.config.js","8a663344a10ef3050dfa176abb324855"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -107,6 +107,8 @@ var isPathWhitelisted = function (whitelist, absoluteUrlString) {
 var stripIgnoredUrlParameters = function (originalUrl,
     ignoreUrlParametersMatching) {
     var url = new URL(originalUrl);
+    // Remove the hash; see https://github.com/GoogleChrome/sw-precache/issues/290
+    url.hash = '';
 
     url.search = url.search.slice(1) // Exclude initial '?'
       .split('&') // Split into an array of 'key=value' strings
@@ -212,8 +214,8 @@ self.addEventListener('fetch', function(event) {
     // handlers a chance to handle the request if need be.
     var shouldRespond;
 
-    // First, remove all the ignored parameter and see if we have that URL
-    // in our cache. If so, great! shouldRespond will be true.
+    // First, remove all the ignored parameters and hash fragment, and see if we
+    // have that URL in our cache. If so, great! shouldRespond will be true.
     var url = stripIgnoredUrlParameters(event.request.url, ignoreUrlParametersMatching);
     shouldRespond = urlsToCacheKeys.has(url);
 
