@@ -1,1 +1,3 @@
-console.log('Humans and I');
+import "../styles/scss/style.scss";
+
+console.log("Humans and I");

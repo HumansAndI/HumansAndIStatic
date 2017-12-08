@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-	   <title>Humans and I</title>
 
-	   <meta charset="utf-8">
-	   <!--Let browser know website is optimized for mobile-->
-	   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+	<title>Humans and I</title>
 
-	   <!-- Canonical URL -->
-	   <link rel="canonical" href="http://www.humansandi.com"/>
+	<meta charset="utf-8">
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	   <!-- Google Verification -->
-	   <meta name="google-site-verification" content="ygB_UICblgr8JSHDGyi-CiYuC2LI8YOzagVMth8pi5U" />
+	<!-- Canonical URL -->
+	<link rel="canonical" href="https://www.humansandi.com" />
 
-	   <!-- Favicon, manifest, and theme colors declarations -->
-		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
-		<link rel="manifest" href="manifest.json">
-		<meta name="theme-color" content="#5C4E9B">
-		
-	   <!-- Styling imports -->
-	   <link rel="stylesheet" type="text/css" href="styles/tachyons.min.css">
-	   <link rel="stylesheet" type="text/css" href="styles/style.css">
+	<!-- Google Verification -->
+	<meta name="google-site-verification" content="ygB_UICblgr8JSHDGyi-CiYuC2LI8YOzagVMth8pi5U" />
 
-	   <!-- Facebook OG props -->
-	   <meta property="og:image" content="https://jac21.github.io/HumansAndIStatic/images/banner-redux.jpg"/>
-	   <meta property="og:description" content="Page for the band Humans and I" />
-	   <meta property="og:url" content="https://jac21.github.io/HumansAndIStatic" />
-	   <meta property="og:title" content="Humand and I" />
-	</head>
-	<body>
+	<!-- Favicon, manifest, and theme colors declarations -->
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#5C4E9B">
 
-		<div class="vh-100 dt w-100 tc bg-dark-gray white cover background"></div>
+	<!-- Styling imports -->
+	<link rel="stylesheet" type="text/css" href="styles/tachyons.min.css">
+	<link rel="stylesheet" type="text/css" href="dist/bundle.css">
 
-	    <script src="dist/app.bundle.js"></script>
-	    <script src="src/lib/ga.js"></script>
-	    <script src="swRegister.js"></script>
-	    
-	</body>
+	<!-- Facebook OG props -->
+	<meta property="og:image" content="https://humansandi.com/dist/eadc89750772354590f2ef03ece98ba9.jpg" />
+	<meta property="og:description" content="Humans and I" />
+	<meta property="og:url" content="https://humansandi.com/" />
+	<meta property="og:title" content="Humans and I" />
+</head>
+
+<body>
+	<div class="vh-100 dt w-100 tc bg-dark-gray white cover background"></div>
+
+	<script src="dist/app.bundle.js"></script>
+	<script src="src/lib/ga.js"></script>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('service-worker.js').then(function (registration) {
+				// Registration was successful
+				console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}).catch(function (err) {
+				// registration failed :(
+				console.log('ServiceWorker registration failed: ', err);
+			});
+		}
+	</script>
+
+</body>
+
 </html>

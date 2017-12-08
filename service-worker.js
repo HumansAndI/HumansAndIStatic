@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["app.bundle.js","0ea236c83c822f99bb1839f2175b8786"],["index.html","1f77aba024f3d6653e0a8a1d5f401876"],["src/lib/ga.js","d26a432d29642475094c2047e4af35e9"],["styles/style.css","0ccc11480db122342c2add7656de0af9"],["styles/tachyons.min.css","e15a28b1f357b6ea5e43eb0dc068baf5"],["sw-precache-config.js","cf56d7b04ae2a0720e7b093c05172740"],["swRegister.js","c86bce6e51fe4dc38d92cf732665c9bb"],["webpack.config.js","db31993922ea4275812dec6bca49e2a9"]];
+var precacheConfig = [["dist/app.bundle.js","7ca919e61f43ac8eb305b2a406ee8b31"],["dist/bundle.css","f91ceef3d25176156fb593b0320eac4a"],["dist/eadc89750772354590f2ef03ece98ba9.jpg","eadc89750772354590f2ef03ece98ba9"],["index.html","d2ba42955ba1a38bee2888a58891bd1f"],["styles/tachyons.min.css","e15a28b1f357b6ea5e43eb0dc068baf5"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
