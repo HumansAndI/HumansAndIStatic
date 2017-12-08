@@ -14,12 +14,14 @@
   "author": "Jeremy Cantu",
   "license": "ISC",
   "devDependencies": {
+    "file-loader": "^1.1.5",
+    "image-webpack-loader": "^3.4.2",
     "sw-precache": "^5.0.0",
     "ts-loader": "^2.3.7",
-    "typescript": "^2.6.1",
+    "typescript": "^2.6.2",
     "typings": "^2.1.0",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
     "tachyons": "^4.9.0"
